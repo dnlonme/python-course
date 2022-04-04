@@ -1,7 +1,7 @@
 # Introduction
 
 ## Syntax 
-Quick overview of all basic synta, more advanced things as we go
+Quick overview of all basic syntax, more advanced things as we go
 
 ### Variables
 
@@ -16,7 +16,7 @@ var_name1, var_name2 = value  # Both variables will have this value
 var_name1, var_name2 = value1, value2 # Variables will have corresponding values
 ```
 
-Pay attention to the difference between var_name and VarType
+Pay attention to the difference between spelling var_name and VarType
 
 To name variables we use snake_case style, it's a way of splitting words using underscore _
 
