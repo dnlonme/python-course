@@ -1,6 +1,4 @@
-# Introduction
-
-## Syntax 
+# Syntax 
 Quick overview of all basic syntax, more advanced things as we go
 
 ### Variables

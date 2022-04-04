@@ -13,7 +13,7 @@ class GuessGame:
         self.attempts_allowed = attempts_allowed
 
     def run(self):
-        for i in range(self.attempts_allowed):
+        for _ in range(self.attempts_allowed):  # we use "_" to declare a variable we are not going to use
             user_guess = self.get_user_guess()
             if user_guess == self.secret_number:
                 print('YEEEEEEEEEAH')
