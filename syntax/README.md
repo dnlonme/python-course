@@ -71,7 +71,7 @@ Detailed docs & examples [here](https://www.w3schools.com/python/python_try_exce
 def function_name(param_name1: ParamType, param_name2: ParamType = default_value) -> ReturnType:
     # do something
 
-function_name(value1, value2) # <- this is called function called
+function_name(value1, value2) # <- this is called function call
 ```
 More info [here](https://www.w3schools.com/python/python_functions.asp)
 

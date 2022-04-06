@@ -4,8 +4,6 @@
 import random
 
 
-
-
 class GuessGame:
 
     def __init__(self, max_number: int, attempts_allowed: int):
@@ -18,8 +16,10 @@ class GuessGame:
             if user_guess == self.secret_number:
                 print('YEEEEEEEEEAH')
                 return
-            print('NOOOOOO')
+            else:
+                print('NOOOOOO')
         print('GameOver')
+
     def get_user_guess(self) -> int:
         try:
             user_guess = int(input('Your guess \n'))

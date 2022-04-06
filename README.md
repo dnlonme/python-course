@@ -1,6 +1,6 @@
 # Python course
 
-I decide to taught my friends how to program, 
+I decided to taught my friends how to program, 
 so will try to gather here materials
 
 ## Structure
