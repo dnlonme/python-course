@@ -13,3 +13,10 @@ detailed description what to do
 
 Additionally, we may create some automated test
 for all exercises later on
+
+## Plan
+0. Syntax
+1. Essentials
+2. Data structures
+3. Functions advanced
+4. Classes a bit advanced
