@@ -13,14 +13,8 @@ TEST_MAX_NUMBER = 11
 
 class SumMaster:
     # write everything needed
-    def __init__(self, range_min: int):
-        self.min_number = range_min
+    pass
 
-    def range_sum(self, max_number: int) -> int:
-        sum = 0
-        for num in range(self.min_number, max_number):  # from 1 to 10
-            sum += num
-        return sum
 
 # This will crush if you didn't write class properly, read the description
 res = SumMaster(TEST_MIN_NUMBER).range_sum(TEST_MAX_NUMBER)

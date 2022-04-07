@@ -36,7 +36,7 @@ def get_friends_by_id(user_id: int, data: dict) -> list[dict]:
             {
                 'name': friend_data.get('name'),
                 'age': friend_data.get('age'),
-                'gender': friend_data.get('age'),
+                'gender': friend_data.get('gender'),
             }
         )
     return result
