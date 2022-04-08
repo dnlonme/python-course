@@ -22,12 +22,12 @@ DATA = {
     }
 }
 
+
 def get_friends_by_id(user_id: int, data: dict) -> list[dict]:
     pass
 
 # res = get_friends_by_id(0, DATA)
 # res [{'name': "Stepan", 'age': 21, 'gender': 'fluid'}]
-
 
 
 for user_id in DATA.keys():

@@ -6,7 +6,6 @@ from typing import List
 
 # Remember this boy? Think about which method can become classmethod
 class GuessGame:
-
     def __init__(self, max_number: int, attempts_allowed: int):
         self.secret_number = random.randrange(1, max_number)
         self.attempts_allowed = attempts_allowed
@@ -38,7 +37,7 @@ class OrderItem:
 
     @property
     def sum(self):
-        '''Should calculate order price'''
+        '''Should calculate order item sum'''
         pass
 
 

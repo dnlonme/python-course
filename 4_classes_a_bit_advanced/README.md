@@ -205,7 +205,7 @@ Example.class_example()
 
 ### Properties
 What if we want to have attributes, that are calculated
-depending on state of the class? 
+depending on state of the object? 
 
 N.B. 'state' is values of all attributes in the moment
 
