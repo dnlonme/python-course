@@ -20,3 +20,7 @@ for all exercises later on
 2. Data structures
 3. Functions advanced
 4. Classes a bit advanced
+
+
+## Other links
+[Telegram number guesser](https://github.com/KeSHaMI/telegram_number_guesser)
