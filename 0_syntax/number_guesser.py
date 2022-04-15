@@ -26,7 +26,7 @@ class GuessGame:
             return user_guess
         except ValueError:
             print('FK U')
-            self.get_user_guess()
+            return self.get_user_guess()
 
 
 game = GuessGame(11, attempts_allowed=3)
