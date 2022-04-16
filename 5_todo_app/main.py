@@ -2,6 +2,8 @@ from actions import *
 from utils import get_int_input
 from db import store_data, load_data
 
+
+# Routing
 ACTIONS = {
     1: get_list_action,
     2: get_todo_action,
@@ -32,6 +34,7 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except BaseException:
+    except BaseException as e:
+        print(e)
         print('Unexpected error happened')
         store_data()

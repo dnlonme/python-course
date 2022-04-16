@@ -10,6 +10,14 @@ def get_int_input(console_text: str) -> int:
         return get_int_input(console_text)
 
 
+def get_bool_input(console_text: str) -> bool:
+    user_input = get_int_input(console_text)
+    if user_input not in range(2):
+        print('Enter 1 or 0')
+        return get_bool_input(console_text)
+    return bool(user_input)
+
+
 def get_choice(console_text: str, data: list) -> int:
     user_input = get_int_input(console_text)
     available_choices = get_available_choices(data)

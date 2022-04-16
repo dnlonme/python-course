@@ -6,6 +6,7 @@ from typing import Callable, Optional
 DATE_FORMAT = '%H:%M:%S %Y-%m-%d'
 
 
+# Model
 @dataclass
 class Todo:
     id: int
@@ -15,15 +16,22 @@ class Todo:
     description: str = ''
 
     def __str__(self):
-        text = ''
+        text = '\n'
         for key, value in asdict(self).items():
-            text += f'{key} : {value}, '
+            text += f'{key} : {value}\n'
         return text
 
+    # Serialization
     def to_dict(self):
         data = asdict(self)
         data['created_at'] = self.created_at.strftime(DATE_FORMAT)
         return data
+
+    # Deserialization
+    @classmethod
+    def from_json(cls, data: dict) -> 'Todo':
+        data['created_at'] = datetime.strptime(data['created_at'], DATE_FORMAT)
+        return cls(**data)
 
 
 @dataclass

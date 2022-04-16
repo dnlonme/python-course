@@ -1,15 +1,18 @@
 from datetime import datetime
 
 from data_types import Todo, Action
-from db import get_data, add_data, remove_data, get_id
+from db import get_data, add_data, remove_data, get_id, update_data
+from forms import create_form, update_form
 from utils import get_choice, get_item_by_user_input
 
 
+# Service
 def get_todo_list():
     for _id, todo in enumerate(get_data()):
         print(f'{_id + 1}. {todo.name} - {todo.is_finished}')
 
 
+# Service
 def select_item(console_text: str) -> Todo:
     get_todo_list()
 
@@ -19,9 +22,9 @@ def select_item(console_text: str) -> Todo:
 
 
 def create_todo():
-    name = input('Enter todo\'s name: ')
-    description = input('Enter todo\'s description: ')
-    todo = Todo(id=get_id(), name=name, description=description, created_at=datetime.now())
+    data = create_form.get_data()
+    print(data)
+    todo = Todo(id=get_id(), created_at=datetime.now(), **data)
     add_data(todo)
 
 
@@ -32,7 +35,11 @@ def delete_todo():
 
 def update_todo():
     item_to_update = select_item("Enter item number you want to update: ")
-    item_to_update.is_finished = not item_to_update.is_finished
+
+    data = update_form.get_data()
+    print(data)
+    item_to_update.__dict__.update(data)
+    update_data(item_to_update)
 
 
 def get_todo():
@@ -40,6 +47,7 @@ def get_todo():
     print(item_to_show)
 
 
+# Views
 get_list_action = Action(name='Get list', action=get_todo_list)
 get_todo_action = Action(name='Get todo', action=get_todo)
 create_todo_action = Action(name='Create todo', action=create_todo)
