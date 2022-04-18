@@ -1,4 +1,5 @@
-from data_types import Todo
+from models import BaseModel
+from typing import Type
 
 
 def get_int_input(console_text: str) -> int:
@@ -31,6 +32,6 @@ def get_available_choices(data: list) -> set[int]:
     return set(range(1, len(data) + 1))
 
 
-def get_item_by_user_input(user_input: int, data: list[Todo]) -> Todo:
+def get_item_by_user_input(user_input: int, data: list[Type[BaseModel]]) -> Type[BaseModel]:
     return data[user_input - 1]
 

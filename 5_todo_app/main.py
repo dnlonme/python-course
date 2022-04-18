@@ -1,4 +1,5 @@
 from actions import *
+from auth import get_current_user
 from utils import get_int_input
 from db import store_data, load_data
 
@@ -10,7 +11,11 @@ ACTIONS = {
     3: create_todo_action,
     4: update_todo_action,
     5: delete_todo_action,
+    11: create_user_action,
+    99: logout_action,
 }
+
+NO_AUTH_ACTIONS = {11, 99}
 
 
 def main():
@@ -22,11 +27,22 @@ def main():
         user_action = get_int_input('Enter action you want to perform: ')
         if user_action == 0:
             break
+
         selected_action: Action = ACTIONS.get(user_action)
         if not selected_action:
             print('Invalid action number')
             continue
-        selected_action.action()
+        if user_action in NO_AUTH_ACTIONS:
+            selected_action.action()
+            continue
+
+        user = get_current_user()
+        if not user:
+            print('Authorization required to perform this action')
+            select_user_to_authenticate()
+            continue
+
+        selected_action.action(user.id)
     print('Application closed')
     store_data()
 

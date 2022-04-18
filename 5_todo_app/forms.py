@@ -52,19 +52,23 @@ class Form:
         return result
 
 
-create_form = Form(
+todo_create_form = Form(
     fields=[
         StringFormField('Enter todo\'s name: ', 'name'),
         StringFormField('Enter todo\'s description: ', 'description')
     ]
 )
 
-update_form = Form(
+todo_update_form = Form(
     fields=[
         StringFormField('Enter new todo\'s description: ', 'description'),
         BooleanFormField('Enter todo status, use 1 for finished, 0 for unfinished: ', 'is_finished')
     ]
 )
 
-
+user_create_form = Form(
+    fields=[
+        StringFormField('Enter username', 'username')
+    ]
+)
 
