@@ -15,11 +15,12 @@ Additionally, we may create some automated test
 for all exercises later on
 
 ## Plan
-0. Syntax
-1. Essentials
-2. Data structures
-3. Functions advanced
-4. Classes a bit advanced
+0. Setup
+1. Syntax
+2. Essentials
+3. Data structures
+4. Functions advanced
+5. Classes a bit advanced
 
 
 ## Other links
