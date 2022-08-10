@@ -15,10 +15,10 @@ class GuessGame:
             user_guess = self.get_user_guess()
             if user_guess == self.secret_number:
                 print('YEEEEEEEEEAH')
-                return
+                break
             else:
                 print('NOOOOOO')
-        print('GameOver')
+        print('Game Over')
 
     def get_user_guess(self) -> int:
         try:

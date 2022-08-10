@@ -45,7 +45,7 @@ Here is a logic:
 
 '''
     Now let's upgrade our main while loop, by replacing it with for loop
-    You will need range function to make defined amount of iterations (one iteration for each attempt)
+    You will need range function to make limited amount of iterations (one iteration for each attempt)
 '''
 
 # A place for a code

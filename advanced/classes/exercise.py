@@ -36,7 +36,7 @@ class OrderItem:
     amount: int
 
     @property
-    def sum(self):
+    def sum(self) -> int:
         '''Should calculate order item sum'''
         pass
 
@@ -47,11 +47,11 @@ class Order:
 
     # And may be some other attributes, like user, date, status etc
     @property
-    def sum(self):
+    def sum(self) -> int:
         '''Should return order sum'''
         pass
 
-    def add_item(self, item: OrderItem):
+    def add_item(self, item: OrderItem) -> None:
         '''Should add order item to order '''
         pass
 
