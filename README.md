@@ -1,8 +1,4 @@
 # Python course
-
-I decided to taught my friends how to program, 
-so will try to gather here materials.
-
 ## Goal
 
 The goal is to gather here materials, exercises and projects
