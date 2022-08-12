@@ -1,5 +1,4 @@
 class ExampleSumMaster:
-
     def __init__(self, range_min: int):
         self.range_min = range_min
 
@@ -8,4 +7,3 @@ class ExampleSumMaster:
         for num in range(self.range_min, range_max):
             sum += num
         return sum
-

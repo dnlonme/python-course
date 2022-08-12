@@ -23,7 +23,7 @@ res = function_name(param2=value2, param1=value1)
 ```
 As you can see for keyword arguments (kwargs),
 the order in which we pass parameters
-doesn't matter, because we are giving python enough info 
+doesn't matter, because we are giving python enough info
 to understand which value belongs to which parameter
 
 N.B. You most likely won't use kwargs
@@ -59,7 +59,7 @@ def get_users(
         address: Optional[str] = None, occupation: Optional[str] = None,
         balance: Optional[int] = None
 ) -> list[User]:
-# Now every parameter is optional, 
+# Now every parameter is optional,
 # and we have a lot to handle inside function
 # BUT using it will be much more comfortable
 
@@ -73,7 +73,7 @@ def get_users(*args) -> list[User]:
 # Okay, what happened?
 # Adding starred (parameter with "*") parameter
 # allows us to accept ANY amount of POSITIONAL arguments
-# N.B. name *args is not mandatory 
+# N.B. name *args is not mandatory
 # you can do smth like *shit, and it'll be alright
 # But you shouldn't because this is conventional name
 
@@ -100,7 +100,7 @@ def get_users(**kwargs) -> list[User]:
 # Okay, what happened?
 # Adding double starred parameter
 # allows us to accept ANY amount of KEYWORD arguments
-# N.B. name **kwargs is not mandatory 
+# N.B. name **kwargs is not mandatory
 # you can do smth like **shit, and it'll be alright
 # But you shouldn't because this is conventional name
 
@@ -188,7 +188,7 @@ example_function(
 # And example of another way of using decorator
 def another_example_function(*args, **kwargs):
     print('Inside another decorate function')
-    
+
 print('ANOTHER WAY')
 check_permission_decorator(another_example_function)(
     'shit', 'here', 'we', 'go', 3, 2, 1,

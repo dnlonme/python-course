@@ -15,7 +15,6 @@ class FormField(ABC):
 
 @dataclass
 class StringFormField(FormField):
-
     def validate_input(self) -> str:
         return input(self.console_text)
 
@@ -27,7 +26,7 @@ class IntegerFormField(FormField):
             user_input = int(input(self.console_text))
             return user_input
         except ValueError:
-            print('Enter number')
+            print("Enter number")
             return self.validate_input()
 
 
@@ -36,7 +35,7 @@ class BooleanFormField(IntegerFormField):
     def validate_input(self) -> bool:
         user_input = super(BooleanFormField, self).validate_input()
         if user_input not in range(2):
-            print('Enter 1 or 0')
+            print("Enter 1 or 0")
             return self.validate_input()
         return bool(user_input)
 
@@ -54,21 +53,16 @@ class Form:
 
 todo_create_form = Form(
     fields=[
-        StringFormField('Enter todo\'s name: ', 'name'),
-        StringFormField('Enter todo\'s description: ', 'description')
+        StringFormField("Enter todo's name: ", "name"),
+        StringFormField("Enter todo's description: ", "description"),
     ]
 )
 
 todo_update_form = Form(
     fields=[
-        StringFormField('Enter new todo\'s description: ', 'description'),
-        BooleanFormField('Enter todo status, use 1 for finished, 0 for unfinished: ', 'is_finished')
+        StringFormField("Enter new todo's description: ", "description"),
+        BooleanFormField("Enter todo status, use 1 for finished, 0 for unfinished: ", "is_finished"),
     ]
 )
 
-user_create_form = Form(
-    fields=[
-        StringFormField('Enter username', 'username')
-    ]
-)
-
+user_create_form = Form(fields=[StringFormField("Enter username", "username")])

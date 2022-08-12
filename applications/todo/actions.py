@@ -2,7 +2,7 @@ from datetime import datetime
 
 from auth import authenticate_user, logout
 from data_types import Action
-from db import get_data, add_data, remove_data, get_id, update_data, get_users
+from db import add_data, get_data, get_id, get_users, remove_data, update_data
 from forms import todo_create_form, todo_update_form, user_create_form
 from models import Todo, User
 from utils import get_choice, get_item_by_user_input
@@ -11,7 +11,7 @@ from utils import get_choice, get_item_by_user_input
 # Service
 def get_todo_list(user_id: int):
     for _id, todo in enumerate(get_data(user_id)):
-        print(f'{_id + 1}. {todo.name} - {todo.is_finished}')
+        print(f"{_id + 1}. {todo.name} - {todo.is_finished}")
 
 
 # Service
@@ -60,7 +60,7 @@ def list_users():
         create_user()
 
     for _id, user in enumerate(get_users()):
-        print(f'{_id + 1}. {user.username}')
+        print(f"{_id + 1}. {user.username}")
 
 
 def select_user(console_text: str) -> User:
@@ -72,18 +72,18 @@ def select_user(console_text: str) -> User:
 
 
 def select_user_to_authenticate():
-    user = select_user('Choose user to auth')
+    user = select_user("Choose user to auth")
     authenticate_user(user)
-    print(f'User: {user.username}')
+    print(f"User: {user.username}")
 
 
 # Views
-get_list_action = Action(name='Get list', action=get_todo_list)
-get_todo_action = Action(name='Get todo', action=get_todo)
-create_todo_action = Action(name='Create todo', action=create_todo)
-update_todo_action = Action(name='Update todo', action=update_todo)
-delete_todo_action = Action(name='Delete todo', action=delete_todo)
+get_list_action = Action(name="Get list", action=get_todo_list)
+get_todo_action = Action(name="Get todo", action=get_todo)
+create_todo_action = Action(name="Create todo", action=create_todo)
+update_todo_action = Action(name="Update todo", action=update_todo)
+delete_todo_action = Action(name="Delete todo", action=delete_todo)
 
 
-create_user_action = Action(name='Create user', action=create_user)
-logout_action = Action(name='Logout', action=logout)
+create_user_action = Action(name="Create user", action=create_user)
+logout_action = Action(name="Logout", action=logout)

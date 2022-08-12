@@ -4,7 +4,7 @@
 ## Install python
 ### Linux
 
-[Guide](https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/) 
+[Guide](https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/)
 
 ### MacOS
 
@@ -48,4 +48,3 @@ e.g this will get updates for this repository
 For now, you won't any other commands,
 although it would be cool if you can create fork
 of repository and push commits with complete exercises to your fork
-

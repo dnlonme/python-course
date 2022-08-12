@@ -1,21 +1,18 @@
-
+from test_utils import NumberGuesserTest
 
 from .main import main
 
-from test_utils import NumberGuesserTest
-
-PATH_PREFIX = __name__.replace('test', 'main') + '.'
+PATH_PREFIX = __name__.replace("test", "main") + "."
 
 
 class NumberGuesserTest1(NumberGuesserTest):
-
     @property
     def path_prefix(self):
         return PATH_PREFIX
 
     def test_game_success(self):
         self.randrange_mock.return_value = 1
-        self.input_mock.return_value = '1'
+        self.input_mock.return_value = "1"
         main()
 
         self.randrange_mock.assert_called_once()
@@ -27,7 +24,7 @@ class NumberGuesserTest1(NumberGuesserTest):
 
     def test_game_fail(self):
         self.randrange_mock.return_value = 2
-        self.input_mock.return_value = '1'
+        self.input_mock.return_value = "1"
 
         main()
 

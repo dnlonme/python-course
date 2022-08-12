@@ -1,21 +1,18 @@
 import json
 from typing import Type
-from models import Todo, User, BaseModel
 
+from models import BaseModel, Todo, User
 
 DATA: dict[str, list[BaseModel]] = {
-    'user': [],
-    'todo': [],
+    "user": [],
+    "todo": [],
 }
 
 
 def load_data():
-    with open('data.json', 'r') as f:
+    with open("data.json", "r") as f:
         loaded_data: dict = json.load(f)
-        models_mapping = {
-            'user': User,
-            'todo': Todo
-        }
+        models_mapping = {"user": User, "todo": Todo}
         for key, value in loaded_data.items():
             model = models_mapping[key]
             DATA[key] = [model.from_json(item) for item in value]
@@ -24,12 +21,12 @@ def load_data():
 def store_data():
     for key, value in DATA.items():
         DATA[key] = [item.to_dict() for item in value]
-    with open('data.json', 'w') as f:
+    with open("data.json", "w") as f:
         json.dump(DATA, f)
 
 
 def get_data(user_id: int) -> list[Todo]:
-    todos: list[Todo] = DATA.get('todo')
+    todos: list[Todo] = DATA.get("todo")
     result = list(filter(lambda todo: todo.user_id == user_id, todos))
     return result
 
@@ -67,4 +64,4 @@ def get_id(model_type: Type[BaseModel]) -> int:
 
 
 def get_users():
-    return DATA.get('user')
+    return DATA.get("user")

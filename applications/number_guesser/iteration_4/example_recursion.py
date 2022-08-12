@@ -4,7 +4,7 @@ MAX_AMOUNT_OF_GUESSES = 3
 
 
 def success():
-    print('You nailed it!')
+    print("You nailed it!")
 
 
 def fail():
@@ -12,16 +12,16 @@ def fail():
 
 
 def game_over():
-    print('Game Over!')
+    print("Game Over!")
 
 
 def wrong_input():
-    print('Pleases enter a number!')
+    print("Pleases enter a number!")
 
 
 def get_user_input():
     try:
-        user_guess = int(input('Enter your guess: '))
+        user_guess = int(input("Enter your guess: "))
         return user_guess
     except ValueError:
         wrong_input()
@@ -41,6 +41,5 @@ def main() -> None:
         game_over()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

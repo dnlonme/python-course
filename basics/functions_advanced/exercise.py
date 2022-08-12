@@ -1,1 +1,1 @@
-'''Rewrite decorator from readme with all prints'''
+"""Rewrite decorator from readme with all prints"""

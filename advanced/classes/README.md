@@ -2,7 +2,7 @@
 A bit more details on classes
 
 ## Object instance vs class instance
-Everything in pyton is object. 
+Everything in pyton is object.
 So the class itself is also object of class 'type'.
 
 Check it out
@@ -53,12 +53,12 @@ class User:
         print(
             f'Hi I\'m {self.__class__.name} {self.__class__.surname} and I\'m {self.__class__.age}'
         )
-        
+
 jesus = User()
 pasha = User(name='Pasha')
 stepan = User(name='Stepan', surname='Douchebag', age=21)
 
-# As you can see class attributes are used when you call 
+# As you can see class attributes are used when you call
 # self.attribute_name, and it wasn't set in __init__
 
 # Look
@@ -92,7 +92,7 @@ class User:
         self.password = self._password.create_hash(password)
 ```
 Also common usage of class attributes is
-creating dataclasses and pydantic models 
+creating dataclasses and pydantic models
 
 Dataclass E.G.
 
@@ -118,7 +118,7 @@ class User:
             name: Optional[str] = None,
             surname: Optional[str] = None,
             age: Optional[int] = None,
-    ): 
+    ):
         self.name = name
         self.surname = surname
         self.age = age
@@ -145,7 +145,7 @@ class Password:
     def verify(cls, plain_password: str, hashed_password: str) -> bool:
         # Using class attribute
         return cls.password_context.verify(plain_password, hashed_password)
-        
+
     @classmethod
     def create_hash(cls, password: str) -> str:
         """Creates password hash"""
@@ -160,7 +160,7 @@ and as always classes gives us other OOP features if we need them.
 So, it's the matter of how you decide to do this.
 
 ### Static methods
-Static method are methods which don't have access 
+Static method are methods which don't have access
 to self or cls.
 
 ```python
@@ -200,12 +200,12 @@ class Example:
         print('Hi Im class method')
         cls.static_example()  # Can call static method ;)
 
-Example.class_example() 
+Example.class_example()
 ```
 
 ### Properties
 What if we want to have attributes, that are calculated
-depending on state of the object? 
+depending on state of the object?
 
 N.B. 'state' is values of all attributes in the moment
 
@@ -236,7 +236,7 @@ class Order:
         for item in self.items:
             sum += item.sum
         return sum
-    
+
     def add_item(self, item: OrderItem):
         self.items.append(item)
 
@@ -250,5 +250,5 @@ print(order.sum)
 order.add_item(tomato_item)
 print(order.sum)
 ```
-Of course, we can have .get_sum method, but for what? 
+Of course, we can have .get_sum method, but for what?
 it shouldn't accept any arguments, so we can have simply property

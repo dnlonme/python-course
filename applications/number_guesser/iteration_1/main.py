@@ -2,7 +2,7 @@ from random import randrange
 
 
 def success():
-    print('You nailed it!')
+    print("You nailed it!")
 
 
 def fail():
@@ -13,6 +13,5 @@ def main() -> None:
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

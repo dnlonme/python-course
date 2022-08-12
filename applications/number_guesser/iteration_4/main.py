@@ -4,7 +4,7 @@ MAX_AMOUNT_OF_GUESSES = 3
 
 
 def success():
-    print('You nailed it!')
+    print("You nailed it!")
 
 
 def fail():
@@ -12,11 +12,11 @@ def fail():
 
 
 def game_over():
-    print('Game Over!')
+    print("Game Over!")
 
 
 def wrong_input():
-    print('Pleases enter a number!')
+    print("Pleases enter a number!")
 
 
 def get_user_input():
@@ -26,7 +26,7 @@ def get_user_input():
 def main() -> None:
     secret_number = randrange(1, 11)
     for _ in range(MAX_AMOUNT_OF_GUESSES):
-        user_guess = int(input('Enter your guess: '))
+        user_guess = int(input("Enter your guess: "))
         if secret_number == user_guess:
             success()
             break
@@ -36,6 +36,5 @@ def main() -> None:
         game_over()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

@@ -1,4 +1,4 @@
-# Syntax 
+# Syntax
 Quick overview of all basic syntax, more advanced things as we go
 
 Highly recommend to complete [this course](https://www.youtube.com/watch?v=Z1Yd7upQsXY&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) (11 lessons)
@@ -21,17 +21,17 @@ To name variables we use snake_case style, it's a way of splitting words using u
 
 VarType is always a class, to name classes we use UpperCamelCase, where we start each word with capital letter
 
-#### N.B. 
+#### N.B.
 To name variables that aren't supposed to change (constants) we change all letters to capital e.g. `SPEED_OF_LIGHT`
 
-To mark "private" (will talk about this later) variables we add _ before the variable e.g. `_some_private_variable` 
+To mark "private" (will talk about this later) variables we add _ before the variable e.g. `_some_private_variable`
 
 ### Conditional statement
 ```python
 if condition:
     # Do smth
 elif second_condition:
-    # Do smth 
+    # Do smth
 else:
     # If none of the above statements are true, do this
 ```
@@ -105,7 +105,7 @@ print(x)
 ```python3
 for item in collection:
     some_var = item
-print(some_var) 
+print(some_var)
 # If collection was empty you will have NameError,
 # otherwise you will have the last item of the collection
 # in some_var, encourage to never acquire last item of the collection like this
@@ -113,7 +113,7 @@ print(some_var)
 ```
 ```python3
 def some_func(param_a: str):
-    # Some code 
+    # Some code
     pass
 
 print(param_a)
@@ -135,7 +135,3 @@ The same applies to classes and theirs methods
 
 ## Conclusion
 So it was a **_very_** basic syntax introduction which you need to start doing something
-
-
-
-

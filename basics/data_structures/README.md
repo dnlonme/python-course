@@ -1,5 +1,5 @@
 # Data structures
-A module about a **really** important thing in programming and python 
+A module about a **really** important thing in programming and python
 
 ## Simple
 ### Int
@@ -8,7 +8,7 @@ x = 3
 y = int('2')
 z = int(b'13')
 ```
-### Float 
+### Float
 ```python
 x = 3.12351345
 y = float('3.1415926')

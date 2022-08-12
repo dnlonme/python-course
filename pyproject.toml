@@ -1,0 +1,10 @@
+[tool.black]
+line-length = 109
+target-version = ['py37']
+
+[tool.isort]
+profile = "black"
+# Pre-commit hooks related config.
+[tool.pycln]
+all = true
+exclude = ["env.py"]

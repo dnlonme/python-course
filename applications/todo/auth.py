@@ -1,4 +1,5 @@
 from typing import Optional
+
 from models import User
 
 _current_user: Optional[User] = None

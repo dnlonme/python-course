@@ -7,7 +7,7 @@ Variable is a link to the place in memory (value)
 ```python
 x = 2
 # Now variable x link us to value 2
-b = x 
+b = x
 # Now variable b links us to value x links to
 
 # You can check it by running code below
@@ -79,14 +79,14 @@ for num in range(1, 101):  # from 1 to 100
 sum = 0
 for num in range(1, 1001):  # from 1 to 1000
     sum += num
-# Hm, now we have 3 pieces of code 
+# Hm, now we have 3 pieces of code
 # which only have 1 different number each
 
 # Time to deal with this
 def range_sum(max_number: int) -> int:
     sum = 0
     for num in range(1, max_number):
-        sum += num 
+        sum += num
     return sum
 
 sum_to_10 = range_sum(11)
@@ -97,22 +97,22 @@ That's why function inputs are _parameters_,
 because they _parametrise_ code.
 
 Basically it's creating _variable_ :scream: parts of code,
-which is good because it helps us to not repeat ourselves 
+which is good because it helps us to not repeat ourselves
 
 N.B. In programming we have a DRY principle, [here](https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/intro-to-clean-code/dry-modular-code/) is the link
 
 ## Classes
 Classes are another programming tool which opens [OOP](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP) for us
 
-The idea of classes is to put together data 
+The idea of classes is to put together data
 (class attributes) and functions (class methods).
-That allows us to follow DRY principle, 
+That allows us to follow DRY principle,
 and create some [abstractions](https://www.educative.io/edpresso/what-is-abstraction-in-programming),
-which helps us to operate code 
+which helps us to operate code
 without knowing how something is actually implemented (encapsulation).
 
 That's really handy when you are using someone else code,
-so you can read smth like `users.get_by_name(username)` 
+so you can read smth like `users.get_by_name(username)`
 and know that this will give you a user, without knowing _how it's actually made_.
 
 #### Important !
@@ -120,13 +120,13 @@ You need to understand what is interface in OOP.
 
 Interface is declaration of methods & attributes class/object should have, without necessarily implementing them.
 
-So when I leave in exercises smth like 
+So when I leave in exercises smth like
 
 ```python3
 class SomeClass:
     def __init__(self, param1: int, param2: str):
         pass
-    
+
     def method_a(self, param1: list[str]) -> int:
         '''Write method that makes ....'''
         pass

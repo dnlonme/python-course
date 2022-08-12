@@ -2,7 +2,7 @@ from random import randrange
 
 
 def success():
-    print('You nailed it!')
+    print("You nailed it!")
 
 
 def fail():
@@ -11,7 +11,7 @@ def fail():
 
 def main() -> None:
     secret_number = randrange(1, 11)
-    user_guess = int(input('a'))
+    user_guess = int(input("Enter your guess: "))
 
     if secret_number == user_guess:
         success()
@@ -19,6 +19,5 @@ def main() -> None:
         fail()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
