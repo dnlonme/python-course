@@ -36,7 +36,7 @@ Here is a logic:
     For this you will need a function, let's call it get_user_input
     Function should not have any arguments, and return a guess as an int, you should ask for an input until input is valid,
     so yeah while loop once again :)
-    Now use it inside your loop to receive an input
+    Now use this function inside your loop to receive an input
 '''
 
 # A place for a code

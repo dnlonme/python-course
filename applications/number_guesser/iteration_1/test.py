@@ -1,24 +1,39 @@
-from unittest import TestCase
-from unittest.mock import Mock, patch
-from main import main, success, fail, randrange
 
 
-class NumberGuesserTest(TestCase):
+from .main import main
 
-    @patch('main.success')
-    @patch('main.fail')
-    @patch('main.randrange', return_value=1)
-    @patch('main.input', return_value=1)
-    def test_game_success(self, input_mock: Mock, randrange_mock: Mock, fail_mock: Mock, success_function_mock: Mock):
+from test_utils import NumberGuesserTest
+
+PATH_PREFIX = __name__.replace('test', 'main') + '.'
+
+
+class NumberGuesserTest1(NumberGuesserTest):
+
+    @property
+    def path_prefix(self):
+        return PATH_PREFIX
+
+    def test_game_success(self):
+        self.randrange_mock.return_value = 1
+        self.input_mock.return_value = '1'
+        main()
+
+        self.randrange_mock.assert_called_once()
+        self.input_mock.assert_called_once()
+
+        self.success_mock.assert_called_once()
+
+        self.fail_mock.assert_not_called()
+
+    def test_game_fail(self):
+        self.randrange_mock.return_value = 2
+        self.input_mock.return_value = '1'
 
         main()
 
-        randrange_mock.assert_called_once()
-        input_mock.assert_called_once()
+        self.randrange_mock.assert_called_once()
+        self.input_mock.assert_called_once()
 
-        success_function_mock.assert_called_once()
+        self.fail_mock.assert_called_once()
 
-        fail_mock.assert_not_called()
-
-
-
+        self.success_mock.assert_not_called()
