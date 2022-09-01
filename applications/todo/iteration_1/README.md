@@ -9,3 +9,6 @@ You have a [video](https://youtu.be/hdfgFYSKZaw) that show flow of an app, so yo
 
 In next iterations you will face some technical requirements,
 so you will be practicing code refactoring (changing code, and it's structure without changing functionality).
+
+
+P.S. use in-built `exit` function to exit the program.
