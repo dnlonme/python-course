@@ -252,3 +252,9 @@ print(order.sum)
 ```
 Of course, we can have .get_sum method, but for what?
 it shouldn't accept any arguments, so we can have simply property
+
+## Task
+Visit `main.py` for the task,
+it's more about thinking
+and copying code from this readme,
+so no test here for now :(

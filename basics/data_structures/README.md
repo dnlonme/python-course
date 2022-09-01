@@ -252,3 +252,18 @@ except KeyError:
 
 gay = x.get('Gay', 'default')
 ```
+
+## Task
+
+Visit `main.py` to see the task,
+you should always validate data
+you receive in the function
+and handle all possible problems,
+think about it. Raise Exceptions.
+
+Tests will help you to detect all edge cases.
+
+To test it (assuming you are in the same directory as this file) run
+```shell
+python -m unittest test.py
+```

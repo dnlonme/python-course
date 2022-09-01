@@ -132,3 +132,12 @@ class SomeClass:
         pass
 ```
 I'm basically declaring an interface you should implement
+
+
+## Task
+Visit `main.py` for the task
+
+To test it (assuming you are in the same directory as this file) run
+```shell
+python -m unittest test.py
+```

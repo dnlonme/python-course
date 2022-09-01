@@ -135,3 +135,7 @@ The same applies to classes and theirs methods
 
 ## Conclusion
 So it was a **_very_** basic syntax introduction which you need to start doing something
+
+
+## Task
+Visit `main.py` for the task

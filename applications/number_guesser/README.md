@@ -1,4 +1,7 @@
-# Testing
+# Number Guesser
+The rules are very simple, computer picks random number and player needs to guess it.
+
+## Testing
 
 To run test you need to be in this directory and call
 ```shell
