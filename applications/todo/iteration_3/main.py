@@ -1,6 +1,8 @@
 from datetime import datetime
 from typing import TypeVar
 
+from .types import Todo
+
 T = TypeVar("T")
 
 # List of todos. Each item is a dict with keys:
@@ -11,13 +13,7 @@ T = TypeVar("T")
 # crated_at - datetime.datetime
 DATA = [
     # Here's the example
-    {
-        "id": 1,
-        "name": "wake up",
-        "description": "try not to die",
-        "is_completed": False,
-        "created_at": datetime.now(),
-    }
+    Todo(id=1, name="wake up", description="try not to die", is_completed=False, created_at=datetime.now())
 ]
 
 
