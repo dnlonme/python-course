@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TypeVar
 
-from .types import Todo
+from .types import Actions, Todo
 
 T = TypeVar("T")
 
@@ -14,6 +14,10 @@ T = TypeVar("T")
 DATA = [
     # Here's the example
     Todo(id=1, name="wake up", description="try not to die", is_completed=False, created_at=datetime.now())
+]
+
+ACTIONS = [
+    Actions(func=exit, name="exit"),
 ]
 
 
