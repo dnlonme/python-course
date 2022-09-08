@@ -1,7 +1,4 @@
 from datetime import datetime
-from typing import TypeVar
-
-T = TypeVar("T")
 
 # List of todos. Each item is a dict with keys:
 # id - int  (unique identifier for each item)
@@ -21,13 +18,8 @@ DATA = [
 ]
 
 
-def get_user_int_input():
-    pass
-
-
-# This Typevar shows that we return an item which is of type that items of the list is.
-def select_item(choices: list[T]) -> T:
-    """Should handle selecting an item from given choices"""
+def get_user_int_input(text: str):
+    """User text for input func"""
     pass
 
 

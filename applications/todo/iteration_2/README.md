@@ -10,4 +10,4 @@ so here are some requirements this time (it's recommended to complete them in th
 1. Make sure you are validating that user inputs int, when it's needed (remember number guesser?)
 2. You should have different function for each action (CRUD + list)
 3. You have few places where you need to show list of todos, reuse function `list_todos`
-4. As you might have noticed, you have some parts where user need to choice (todo or action). Make function that will handle selecting an item from any list. (look at `select_item` function in the main file)
+4. Make sure that once a todo is created, it's id is unique and is equal to the current max id + 1

@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TypeVar
 
-from .types import Actions, Todo
+from applications.todo.iteration_3.types import Action, Todo
 
 T = TypeVar("T")
 
@@ -16,18 +16,13 @@ DATA = [
     Todo(id=1, name="wake up", description="try not to die", is_completed=False, created_at=datetime.now())
 ]
 
-ACTIONS = [
-    Actions(func=exit, name="exit"),
-]
 
-
-def get_user_int_input():
+def get_user_int_input(text: str):
     pass
 
 
-# This Typevar shows that we return an item which is of type that items of the list is.
-def select_item(choices: list[T]) -> T:
-    """Should handle selecting an item from given choices"""
+def select_item(choices: list[T], text: str) -> T:
+    """Should return item from choices"""
     pass
 
 
@@ -51,8 +46,17 @@ def list_todos():
     pass
 
 
+ACTIONS = [
+    Action(func=exit, name="exit", id=0),
+]
+
+
 def main():
-    pass
+    print("Welcome to the todo list!")
+    while True:
+        action = select_item(ACTIONS, "Pick an action:\n")
+        action.func()
+        input("Press Enter to continue:\n")
 
 
 if __name__ == "__main__":

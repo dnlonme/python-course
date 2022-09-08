@@ -45,6 +45,6 @@ e.g this will get updates for this repository
 
 `git pull origin main`
 
-For now, you won't any other commands,
+For now, you won't need any other commands,
 although it would be cool if you can create fork
 of repository and push commits with complete exercises to your fork

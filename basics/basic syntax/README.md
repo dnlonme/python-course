@@ -10,8 +10,6 @@ var_name: VarType = value
 ```
 Also you can create multiple variables in one line
 ```python
-var_name1, var_name2 = value  # Both variables will have this value
-# OR
 var_name1, var_name2 = value1, value2 # Variables will have corresponding values
 ```
 
