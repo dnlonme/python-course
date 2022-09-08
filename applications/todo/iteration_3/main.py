@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TypeVar
 
-from applications.todo.iteration_3.types import Action, Todo
+from .types import Action, Todo
 
 T = TypeVar("T")
 
