@@ -1,7 +1,9 @@
+import json
+from dataclasses import asdict
 from datetime import datetime
 from typing import TypeVar
 
-from applications.todo.iteration_4.types import Action, Todo
+from applications.todo.iteration_4.example.types import Action, Todo
 
 T = TypeVar("T")
 
@@ -14,6 +16,10 @@ T = TypeVar("T")
 
 
 # You should initialize DATA variable yourself
+with open("data.json", "rb") as f:
+    data = json.load(f)
+    todos = data["todo"]
+    DATA = [Todo.from_json(todo) for todo in todos]
 
 
 def get_user_int_input(text: str):
@@ -75,13 +81,21 @@ def list_todos():
         print(str(todo))
 
 
+def _exit():
+    with open("data.json", "w") as f:
+        _data = {"todo": [todo.to_dict() for todo in DATA]}
+        data = json.dumps(_data)
+        f.write(data)
+    exit()
+
+
 ACTIONS = [
     Action(func=create_todo, name="create todo", id=1),
     Action(func=update_todo, name="update todo", id=2),
     Action(func=delete_todo, name="delete todo", id=3),
     Action(func=get_todo, name="get todo", id=4),
     Action(func=list_todos, name="list todos", id=5),
-    Action(func=exit, name="exit", id=0),
+    Action(func=_exit, name="exit", id=0),
 ]
 
 
