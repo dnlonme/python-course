@@ -156,8 +156,6 @@ Decorator is the function, that takes another function as an input
 This code is executable
 ```python
 from typing import Callable
-
-
 def check_permission_decorator(func) -> Callable:  # Returns decorated function
     # declaring so called 'wrapper' function
     def wrapper(*args, **kwargs):  # Basically saying accept anything

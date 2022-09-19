@@ -1,0 +1,18 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "name": "wake up",
+      "description": "try not to die",
+      "is_completed": false,
+      "created_at": "17:10:40 2022-09-08"
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "description": "estttt",
+      "is_completed": false,
+      "created_at": "16:16:58 2022-09-09"
+    }
+  ]
+}

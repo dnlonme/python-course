@@ -38,7 +38,7 @@ def select_item(choices: list[T], text: str) -> T:
     return res[0]
 
 
-def _select_todo() -> Todo:
+def select_todo() -> Todo:
     return select_item(DATA, "Select todo:\n")
 
 
@@ -52,19 +52,19 @@ def create_todo():
 
 
 def update_todo():
-    todo = _select_todo()
+    todo = select_todo()
     todo.is_completed = not todo.is_completed
     print(f"Todo {todo.name} is_completed is now {todo.is_completed}")
 
 
 def delete_todo():
-    todo = _select_todo()
+    todo = select_todo()
     DATA.remove(todo)
     print(f"Todo with id {todo.id} was deleted")
 
 
 def get_todo():
-    todo = _select_todo()
+    todo = select_todo()
     print(
         f"Name: {todo.name}\nDescription: {todo.description}\nCompleted:{todo.is_completed}\nCreated at: {todo.created_at}"
     )

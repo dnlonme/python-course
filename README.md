@@ -26,5 +26,14 @@ You can create issues and ask to add my explanation of preferred themes.
 You can add materials to existing READMEs or fix any typos/errors and create PR.
 
 
+## Pre-commit formatting
+For setup use
+```
+pip install pre-commit
+pre-commit install
+```
+
+
+
 ## Other links
 [Telegram number guesser](https://github.com/KeSHaMI/telegram_number_guesser)

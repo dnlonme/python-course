@@ -11,6 +11,7 @@ class Todo:
     name: str
     description: str
     is_completed: bool
+    user_id: int
     created_at: datetime
 
     def __str__(self):
@@ -23,6 +24,26 @@ class Todo:
 
     @classmethod
     def from_json(cls, data: dict) -> "Todo":
+        data["created_at"] = datetime.strptime(data["created_at"], DATE_FORMAT)
+        return cls(**data)
+
+
+@dataclass
+class User:
+    id: int
+    name: str
+    created_at: datetime
+
+    def __str__(self):
+        return f"{self.id}. {self.name}"
+
+    def to_dict(self):
+        data = asdict(self)
+        data["created_at"] = self.created_at.strftime(DATE_FORMAT)
+        return data
+
+    @classmethod
+    def from_json(cls, data: dict) -> "User":
         data["created_at"] = datetime.strptime(data["created_at"], DATE_FORMAT)
         return cls(**data)
 

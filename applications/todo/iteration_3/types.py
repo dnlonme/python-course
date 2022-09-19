@@ -15,5 +15,5 @@ class Todo:
 @dataclass
 class Action:
     id: int
-    func: Callable[[], None]
+    func: Callable
     name: str
