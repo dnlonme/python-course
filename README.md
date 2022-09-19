@@ -32,7 +32,10 @@ For setup use
 pip install pre-commit
 pre-commit install
 ```
-
+You can launch formatting manually with
+```
+pre-commit
+```
 
 
 ## Other links
