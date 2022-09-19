@@ -23,6 +23,7 @@ def get_user_input():
     pass
 
 
+
 def main() -> None:
     secret_number = randrange(1, 11)
     for _ in range(MAX_AMOUNT_OF_GUESSES):
